@@ -154,3 +154,7 @@ RUN set -ex \
     && gem install aws-sdk-v1 -v $AWS_SDK_VERSION \
     && gem install rubyzip -v $RUBY_ZIP_VERSION \
     && apk del .dpl-builddeps
+
+#### mysql ####
+
+RUN docker-php-ext-install pdo_mysql
